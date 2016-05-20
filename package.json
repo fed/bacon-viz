@@ -4,18 +4,22 @@
   "description": "Visual examples for Bacon.js",
   "scripts": {
     "clean": "rm -rf target",
-    "build": "mkdir -p target && node_modules/.bin/browserify src/main.jsx -o target/bacon-examples.js -d -t [ babelify --sourceMaps true ]",
+    "build": "mkdir -p target && node_modules/.bin/browserify src/main.jsx -o target/bacon-examples.js --extension=.jsx -d -t [ babelify --sourceMaps true --extensions .jsx ]",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Blake Haswell",
   "license": "GPL-3.0",
+  "dependencies": {
+    "baconjs": "^0.7.84",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
-    "baconjs": "^0.7.84",
-    "browserify": "^13.0.1",
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "browserify": "^13.0.1"
   }
 }
