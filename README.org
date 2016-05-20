@@ -1,4 +1,14 @@
-Visual examples for Bacon.js
+* Visual examples for Bacon.js
+
+** Building
+
+| Command                       | Description                                   |
+|-------------------------------+-----------------------------------------------|
+| ~npm install~                 | Install dependencies                          |
+| ~npm run clean~               | Deletes the target directory                  |
+| ~npm run build~               | Builds static assets and compiles JavaScript  |
+| ~npm run build-static-assets~ | Moves static assets into the target directory |
+| ~npm run build-js~            | Compiles JavaScript into the target directory |
 
 ** License
 
