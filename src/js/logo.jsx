@@ -8,6 +8,6 @@ const imgStyle = {
 
 export default () => (
     <h1>
-        <img style={imgStyle} src="./logo.png" alt="Bacon.js" />
+        <img style={imgStyle} src="./images/logo.png" alt="Bacon.js" />
     </h1>
 );

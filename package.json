@@ -4,8 +4,9 @@
   "description": "Visual examples for Bacon.js",
   "scripts": {
     "clean": "rm -rf target",
-    "build": "mkdir -p target && node_modules/.bin/browserify src/main.jsx -o target/bacon-examples.js --extension=.jsx -d -t [ babelify --sourceMaps true --extensions .jsx ]",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build-static-assets && npm run build-js",
+    "build-static-assets": "mkdir -p target && cp -R src/static/ target/",
+    "build-js": "mkdir -p target/js && node_modules/.bin/browserify src/js/main.jsx -o target/js/app.js --extension=.js --extension=.jsx -d -t [ babelify --sourceMaps true ]"
   },
   "author": "Blake Haswell",
   "license": "GPL-3.0",
